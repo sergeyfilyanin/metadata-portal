@@ -97,9 +97,8 @@ export default function Sidebar({
 
   return (
     <div
-      className={`flex-col h-auto min-h-screen w-80 min-w-[20rem] bg-neutral-100 px-6 justify-between absolute ${
-        isOpen ? "flex" : "hidden"
-      } z-30 md:relative md:flex`}
+      className={`flex-col h-auto min-h-screen w-80 min-w-[20rem] bg-neutral-100 px-6 justify-between absolute ${isOpen ? "flex" : "hidden"
+        } z-30 md:relative md:flex`}
     >
       <div className=" ">
         <h1 className="font-bold text-xl my-6">
@@ -172,21 +171,11 @@ export default function Sidebar({
         </div>
         <a
           className="text-left mt-3 inline-block md:w-fit w-full"
-          href="https://github.com/nova-wallet/metadata-portal"
+          href="https://github.com/gear-tech/metadata-portal"
           target={"blank"}
         >
           <div className="flex float-left font-bold">
             More on GitHub <ArrowSmRightIcon className="inline ml-1 w-4" />
-          </div>
-        </a>
-        <a
-          href="https://novawallet.io/terms"
-          className="inline-block mt-1 mb-4"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="text-left font-bold">
-            Terms & Services <ArrowSmRightIcon className="inline ml-1 w-4" />
           </div>
         </a>
       </div>

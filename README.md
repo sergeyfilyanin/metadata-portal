@@ -6,10 +6,6 @@ This is an important addition to Signer, which can update the metadata inside on
 Parity will host its own version of the page for all chains for which we sign the metadata.
 External users (chain owners) will be able to deploy their versions of metadata portal if they want.
 
-#  Supported Chains
-
-List of supported chains is published in [Nova-utils repository](https://github.com/nova-wallet/nova-utils/tree/master/chains#list-of-supported-networks)
-
 ## How does it work?
 
 It all starts with the Github repository. Any user can clone it and run their Metadata Portal. We also host our own version, so let's break down the principles of working on it.
