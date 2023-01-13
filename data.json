@@ -1,0 +1,30 @@
+{
+  "vara": {
+    "title": "Vara Network",
+    "color": "#00a87a",
+    "rpcEndpoint": "wss://rpc.vara-network.io/",
+    "genesisHash": "0xe95743738788fb980fc5cfdaded9160d1e9eed707f7f6e19a591fd282cb29a69",
+    "unit": "VARA",
+    "base58prefix": 137,
+    "icon": "/img/vara-logo.svg",
+    "decimals": 12,
+    "metadataVersion": 130,
+    "metadataQr": {
+      "path": "qr/vara_metadata_130.apng",
+      "signedBy": "Gear Technologies",
+      "source": {
+        "type": "Rpc",
+        "block": "0x6bb16b96bcbd08170e167f5f8110a846147615eb78252181fe8dfa5a92c9f084"
+      }
+    },
+    "nextMetadataVersion": null,
+    "nextMetadataQr": null,
+    "latestMetadata": "qr/vara_metadata_latest.apng",
+    "specsQr": {
+      "path": "qr/vara_specs.png",
+      "signedBy": "Gear Technologies",
+      "source": null
+    },
+    "testnet": false
+  }
+}
