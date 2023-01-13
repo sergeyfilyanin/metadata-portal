@@ -37,6 +37,7 @@ jobs:
         id: new-branch
         run: |
           NAME="$BRANCH_PREFIX-$(date '+%Y-%m-%d')"
+          echo "::set-output name=name::$NAME"
 
       - name: Create Pull Request if not exist
         if: ${{ steps.compare.outputs.metaChanged == 'true' }}
