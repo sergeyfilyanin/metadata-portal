@@ -5,7 +5,7 @@ on:
 
 
 env:
-  BRANCH_PREFIX: updated-codes
+  BRANCH_PREFIX: updated-qr
 
 jobs:
   update:
@@ -32,6 +32,22 @@ jobs:
           else echo "Spec and Genesis haven't changed"
           fi
           
-      - name: Echo
+      - name: New PR branch
         if: ${{ steps.compare.outputs.metaChanged == 'true' }}
-        run: echo 'Meta Changed'
+        id: new-branch
+        run: |
+          NAME="$BRANCH_PREFIX-$(date '+%Y-%m-%d')"
+
+      - name: Create Pull Request if not exist
+        if: ${{ steps.compare.outputs.metaChanged == 'true' }}
+        id: cpr
+        uses: peter-evans/create-pull-request@f22a7da129c901513876a2380e2dae9f8e145330
+        with:
+          commit-message: add updated QR codes
+          branch: ${{ steps.new-branch.outputs.name }}
+          delete-branch: true
+          base: master
+          title: '[Automated] Review new metadata QRs'
+          body: |
+            Updated metadata QR codes
+          draft: false
